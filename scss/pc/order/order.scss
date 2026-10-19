@@ -114,6 +114,9 @@ $tone-ok: #2f8f5b;
 .qty {
 	display: inline-flex;
 	align-items: center;
+	align-self: start;
+	justify-self: start;
+	width: fit-content;
 	height: 48px;
 	border: 1px solid $line;
 	border-radius: 999px;
@@ -467,6 +470,16 @@ $tone-ok: #2f8f5b;
 		}
 		.qty {
 			grid-column: 2;
+			/* a grid item blockifies inline-flex, so without this the stepper
+			   stretches across the whole column */
+			justify-self: start;
+			height: 38px;
+			button {
+				width: 36px;
+				svg {
+					font-size: 18px;
+				}
+			}
 		}
 		.line-total {
 			grid-column: 2;
